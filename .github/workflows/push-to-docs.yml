@@ -1,0 +1,59 @@
+name: 📘 Auto Changelog to Docs
+
+on:
+  push:
+    branches:
+      - master  # Trigger when pushing to Master branch
+
+env:
+  REPO_NAME: modelsuite-frontend 
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v3
+
+      - name: Generate changelog block
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          LOG=$(git log -10 --pretty=format:"- %s (%an)")
+
+          if [ -z "$LOG" ]; then
+            echo "No recent commits to log."
+            exit 0
+          fi
+
+          {
+            echo "<Update label=\"$DATE\" description=\"$REPO_NAME - Auto update\">"
+            echo ""
+            echo "$LOG"
+            echo ""
+            echo "</Update>"
+            echo ""
+          } > update.mdx
+
+      - name: Clone Mintlify Docs repo
+        run: |
+          git clone https://${{ secrets.DOCS_TOKEN }}@github.com/modelsuite-ai/Docs.git docs-clone
+
+      - name: Prepend changelog entry
+        run: |
+          cd docs-clone
+          if [ ! -f changelog.mdx ]; then
+            echo "Creating new changelog.mdx"
+            touch changelog.mdx
+          fi
+          cat ../update.mdx changelog.mdx > combined.mdx
+          mv combined.mdx changelog.mdx
+
+      - name: Commit and Push to Docs
+        run: |
+          cd docs-clone
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add changelog.mdx
+          git commit -m "🔄 Auto-update changelog from $REPO_NAME"
+          git push

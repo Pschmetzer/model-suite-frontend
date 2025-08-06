@@ -1,0 +1,51 @@
+name: PR Review Reminder
+
+on:
+  schedule:
+    - cron: '0 9 * * 1-5'  # Run every weekday at 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install GitHub CLI + jq
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y curl jq
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+          sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+          sudo apt-get update
+          sudo apt-get install gh -y
+
+      - name: Authenticate GitHub CLI using PAT
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          echo "$GH_PAT" | gh auth login --with-token
+
+      - name: Check for stale PRs and send Discord reminder
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          PRS=$(gh pr list --state open --json title,url,createdAt,author --jq '.[] | select((now - (.createdAt | fromdateiso8601)) > 172800)')
+          if [[ -n "$PRS" ]]; then
+            MESSAGE="📣 **Open PRs waiting for review (older than 2 days):**\n"
+            while IFS= read -r pr; do
+              TITLE=$(echo "$pr" | jq -r '.title')
+              URL=$(echo "$pr" | jq -r '.url')
+              AUTHOR=$(echo "$pr" | jq -r '.author.login')
+              MESSAGE+="🔸 *$TITLE* by @$AUTHOR → <$URL>\n"
+            done <<< "$PRS"
+            curl -H "Content-Type: application/json" \
+                 -X POST \
+                 -d "{\"content\": \"$MESSAGE\"}" \
+                 "$DISCORD_WEBHOOK"
+          else
+            echo "✅ No stale PRs found."
+          fi

@@ -1,0 +1,84 @@
+.new-post-container {
+  color: wheat;
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+}
+
+.save-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.save_btn_right {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+.audien {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.editor-wrapper {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.editor {
+  height: 300px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+.radio-group label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.radio-group span {
+  margin-left: 8px;
+}
+
+.date-picker {
+  width: 817px;
+  padding: 8px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  background-color: #2e2e2e;
+  color: white;
+}

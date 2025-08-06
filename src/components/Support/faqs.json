@@ -1,0 +1,132 @@
+[
+  {
+    "question": "What is Modelsuite.ai?",
+    "answer": "Modelsuite.ai is an all-in-one platform designed specifically for model and creator agencies. It helps streamline your operations by offering tools for task management, content scheduling, performance tracking, revenue insights, and secure collaboration. With Modelsuite.ai, agencies can manage their models, content, and team efficiently from a unified dashboard.",
+    "category": "General"
+  },
+  {
+    "question": "Who is Modelsuite.ai for?",
+    "answer": "Modelsuite.ai is designed for creator agencies, model managers, and individual models. Whether you're a small agency with just a few models or a large enterprise managing dozens, our platform offers customizable features to help you scale and stay organized.",
+    "category": "General"
+  },
+  {
+    "question": "How does the platform work?",
+    "answer": "Modelsuite.ai integrates multiple functions into one platform: Model Management, Task & Content Management, Revenue & Analytics, Collaboration Tools, and Leak Protection.",
+    "category": "General"
+  },
+  {
+    "question": "What features do you offer?",
+    "answer": "Key features include Model CRM, Revenue Analytics, Task & Content Scheduling, Team Collaboration, Leak Protection Integration, and Integrations with OnlyFans, Fansly, etc.",
+    "category": "Features"
+  },
+  {
+    "question": "Is there a free trial?",
+    "answer": "Yes! We offer a 14-day free trial for our Basic Plan, allowing you to explore all core features.",
+    "category": "Billing & Finance"
+  },
+  {
+    "question": "How much does Modelsuite.ai cost?",
+    "answer": "Modelsuite.ai offers flexible pricing plans (to be updated): Basic Plan (€XX/month), Pro Plan (€XX/month), and Enterprise Plan (€XX/month).",
+    "category": "Billing & Finance"
+  },
+  {
+    "question": "Can I change my plan later?",
+    "answer": "Yes, you can upgrade or downgrade your plan anytime through your account settings.",
+    "category": "Billing & Finance"
+  },
+  {
+    "question": "Is my data safe?",
+    "answer": "Yes. Modelsuite.ai follows GDPR compliance and uses end-to-end encryption to protect your data.",
+    "category": "Security"
+  },
+  {
+    "question": "How can I get support if I have issues?",
+    "answer": "We offer 24/7 customer support via email, Help Center, and live chat within the platform.",
+    "category": "Support"
+  },
+  {
+    "question": "Do you offer educational resources?",
+    "answer": "Yes! Our Academy provides tutorials, courses, and resources to help you and your models succeed.",
+    "category": "Support"
+  },
+  {
+    "question": "How do I cancel my subscription?",
+    "answer": "You can cancel directly through your account settings at any time. You will retain access until your billing cycle ends.",
+    "category": "Billing & Finance"
+  },
+  {
+    "question": "How does Modelsuite.ai help with model leak protection?",
+    "answer": "Our platform integrates tools that monitor for leaks and automatically send takedown requests.",
+    "category": "Security"
+  },
+  {
+    "question": "Can I manage my team and assign roles?",
+    "answer": "Yes, you can assign roles and set role-based access to restrict data visibility within your team.",
+    "category": "Team Management"
+  },
+  {
+    "question": "Can I track my model's performance across multiple platforms?",
+    "answer": "Yes! You can track performance metrics across platforms like OnlyFans, Fansly, and Patreon.",
+    "category": "Analytics"
+  },
+  {
+    "question": "Do you offer custom features for larger agencies?",
+    "answer": "Yes, we provide tailored plans and features for large agencies. Contact us to discuss your requirements.",
+    "category": "Features"
+  },
+  {
+    "question": "How does task management work?",
+    "answer": "You can assign tasks to models, set deadlines, track progress, and approve or reject content.",
+    "category": "Tasks"
+  },
+  {
+    "question": "Does Modelsuite.ai offer analytics for social media performance?",
+    "answer": "Yes! You can view analytics from Instagram, TikTok, and YouTube including engagement and follower growth.",
+    "category": "Analytics"
+  },
+  {
+    "question": "Can I manage multiple agencies with a single account?",
+    "answer": "Currently, Modelsuite.ai supports one agency per account. Contact us for potential custom solutions.",
+    "category": "General"
+  },
+  {
+    "question": "Will Modelsuite.ai help me manage model contracts?",
+    "answer": "Yes! You can upload, track, and digitally sign model contracts within the platform.",
+    "category": "Features"
+  },
+  {
+    "question": "Can I manage payments and payouts for my models?",
+    "answer": "Yes! Track, calculate, and automate payouts via Stripe or PayPal integrations.",
+    "category": "Billing & Finance"
+  },
+  {
+    "question": "Can I track content performance across social media platforms?",
+    "answer": "Yes, performance metrics like likes, comments, and follower growth are available for social media content.",
+    "category": "Analytics"
+  },
+  {
+    "question": "Can I set up automated content posting?",
+    "answer": "Currently, automated posting is not available, but scheduling is supported via the calendar.",
+    "category": "Content Management"
+  },
+  {
+    "question": "Can I create custom reports within the platform?",
+    "answer": "Yes! You can generate custom reports on earnings, tasks, and performance over any timeframe.",
+    "category": "Analytics"
+  },
+  {
+    "question": "How do I manage content approvals?",
+    "answer": "Models can upload content, and you can approve or reject it within the platform.",
+    "category": "Content Management"
+  },
+  {
+    "question": "Does Modelsuite.ai offer customer support for onboarding?",
+    "answer": "Yes! We provide tutorials, video guides, and dedicated onboarding support.",
+    "category": "Support"
+  },
+  {
+    "question": "Does the platform offer a mobile app?",
+    "answer": "Currently no mobile app, but the platform is fully responsive in mobile browsers. A mobile app is in progress.",
+    "category": "General"
+  }
+]
